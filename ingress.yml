@@ -1,0 +1,44 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: flask-ingress
+spec:
+  rules:
+  - host: service1.example.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: rayservice-sample-head-svc
+            port:
+              number: 8265
+  - host: service2.example.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: rayservice-sample-serve-svc
+            port:
+              number: 8000
+
+
+
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: flask-ingress
+# spec:
+#   rules:
+#   - http:
+#       paths:
+#       - pathType: Prefix
+#         path: /
+#         backend:
+#           service:
+#             name: rayservice-sample-raycluster-4gcvc-head-svc
+#             port:
+#               number: 8265
