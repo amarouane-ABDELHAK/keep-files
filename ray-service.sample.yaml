@@ -5,16 +5,16 @@
 apiVersion: ray.io/v1
 kind: RayService
 metadata:
-  name: rayservice-sample
+  name: my-ray-service
 spec:
   # serveConfigV2 takes a yaml multi-line scalar, which should be a Ray Serve multi-application config. See https://docs.ray.io/en/latest/serve/multi-app.html.
   serveConfigV2: |
     applications:
-      - name: fruit_app
-        import_path: main_fast:abdelhak_app
+      - name: fast_app
+        import_path: main:abdelhak_app
         route_prefix: /
         runtime_env:
-          working_dir: "https://github.com/amarouane-ABDELHAK/keep-files/raw/refs/heads/dev/main_fast.zip"
+          working_dir: "https://github.com/amarouane-ABDELHAK/keep-files/raw/refs/heads/dev/src/main_fasting.zip"
   rayClusterConfig:
     rayVersion: '2.41.0' # should match the Ray version in the image of the containers
     ######################headGroupSpecs#################################

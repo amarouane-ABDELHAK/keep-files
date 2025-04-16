@@ -11,7 +11,7 @@ spec:
         path: /
         backend:
           service:
-            name: rayservice-sample-head-svc
+            name: my-ray-service-raycluster-nbs88-head-svc
             port:
               number: 8265
   - host: service2.example.com
@@ -21,7 +21,7 @@ spec:
         path: /
         backend:
           service:
-            name: rayservice-sample-serve-svc
+            name: my-ray-service-serve-svc
             port:
               number: 8000
 
