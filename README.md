@@ -14,3 +14,4 @@ systemd-run --scope --user -p "Delegate=yes" kind create cluster --name ray-clus
 
  k apply -f /home/amarouane/workstation/github/keep-files/ingress.yml
 
+HELLO
