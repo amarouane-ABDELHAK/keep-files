@@ -17,3 +17,4 @@ systemd-run --scope --user -p "Delegate=yes" kind create cluster --name ray-clus
 HELLO
 HELLO 2
 HELLO 3
+HELLO 4
